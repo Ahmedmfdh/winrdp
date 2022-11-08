@@ -1,0 +1,112 @@
+{
+    "name": "سورس المجرم ميوزك",
+    "description": "سورس المجرم تخصص تشغيل اغاني في الكول مجموعات او قنوات مطور السورس المجرم",
+    "logo": "https://telegra.ph/file/878a794e4d78b29735825.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "Yukki",
+    "YukkiMusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "الاب ايدي بتستخرجو من هنا https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "الاب هاش بنستخرجو من هناhttps://my.telegram.org",
+        "value": "",
+        "required": true
+      },  
+      "BOT_TOKEN": {
+        "description": "توكن بوتك بتجيبو من هنا @Botfather",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "ايدي المالك او المطور تقدر تحط اتنين بس الاول المتحكم واللي بيظهر",
+        "value": "5648157552",
+        "required": true
+      },
+      "LOG_GROUP_ID": {
+        "description": "ايدي المجموعه اللي هيكون فيها البوت والمساعد ادمن لازم ",
+        "value": "-1001690504312",
+        "required": true
+      },
+      "CHANNEL": {
+        "description": "رابط قناتك بدون @ مثل SourseZezoMusic",
+        "value": "SourseZezoMusic",
+        "required": false
+      },
+      "CHANNEL_SUDO": {
+        "description": "رابط قناتك مثل https://t.me/SourseZezoMusic",
+        "value": "https://t.me/SourseZezoMusic",
+        "required": false
+      },
+      "SUPPORT_GROUP": {
+        "description": "رابط جروبك مثل https://t.me/E_s_l_a_m_Zelzal",
+        "value": "https://t.me/E_s_l_a_m_Zelzal",
+        "required": false
+      },
+      "SUPPORT_CHANNEL": {
+        "description": "رابط قناتك مثل https://t.me/SourseZezoMusic",
+        "value": "https://t.me/SourseZezoMusic",
+        "required": false
+      },
+      "GITHUB_REPO": {
+        "description": "رابط التنصيب مثل https://t.me/B_o_d_a_90",
+        "value": "https://t.me/B_o_d_a_90",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "عايز تحطو حطو مش بتعرف سيبو فاضي",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "بردو عايز تحطو لو فاهم حطو مش عايز سيبو فاضي",
+        "value": "",
+        "required": false
+      },
+      "MONGO_DB_URI": {
+        "description": "ده المونج ممكن تسيبو زي مهوه لو معندكش",
+        "value": "mongodb+srv://dragon:t.me.yy8gg@dragon.7v7baed.mongodb.net/mohamed?retryWrites=true&w=majority",
+        "required": true
+      },
+      "UPSTREAM_REPO": {
+        "description": "لو مش فاهم دي اي سبها زي مهيه",
+        "value": "https://github.com/Ahmedmfdh/winrdp",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "متلعبش فيها",
+        "value": "main",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+          "url": "https://github.com/rahulps1000/heroku-buildpack-nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "free"
+          }
+      }
+  }
